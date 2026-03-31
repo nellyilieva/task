@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-import notes_manager
+from notes_manager import load_notes, save_notes
 
 @dataclass
 class Note:
@@ -10,6 +10,7 @@ class Note:
     def to_dict(self):
         return {"id": self.id, "title": self.title, "content": self.content,}
     
+    @staticmethod
     def from_dict(data):
         return Note(id=data["id"], title=data["title"], content=data["content"],)
     
