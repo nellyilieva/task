@@ -1,7 +1,7 @@
 import json
 import os
 
-STORAGE_PATH = os.path.join(os.path.expanduser("~"), ".notes.json")
+STORAGE_PATH = os.path.join(os.path.dirname(__file__), "notes.json")
 
 
 def load_notes():
